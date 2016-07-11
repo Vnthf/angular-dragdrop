@@ -158,7 +158,7 @@
 
                     e.dataTransfer.setData('text', transferDataText);
                     e.dataTransfer.effectAllowed = 'copyMove';
-
+                    e.stopPropagation();
                     $rootScope.$broadcast('ANGULAR_DRAG_START', e, sendChannel, transferDataObject);
                 }
                 else {
